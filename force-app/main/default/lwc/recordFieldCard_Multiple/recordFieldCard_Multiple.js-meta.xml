@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>TRUE</isExposed>
+    <masterLabel>Object Field Card (Multiple)</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Opportunity</object>
+                <object>Account</object>
+                <object>Contact</object>
+                <object>Case</object>
+                <object>Lead</object>
+                <object>Contract</object>
+                <object>Order</object>
+            </objects>
+            <property name="cardTitle" type="String" label="Card Title" description="Title of the card" />
+            <property name="icon" type="String" label="Card Icon" description="Salesforce Standard Icon Name E.g: standard:case" />
+            <property name="summary" type="String" label="Card summary" description="Provide text content for the summary of this card" />
+            <property name="field1" type="String" label="Field 1 Header" description="Text body relating to field 1" />
+            <property name="fieldApiName1" type="String" label="Field 1 API Name" description="API name of the first field to display." />
+            <property name="field2" type="String" label="Field 2 Header" description="Text body relating to field 2" />
+            <property name="fieldApiName2" type="String" label="Field 2 API Name" description="API name of the second field to display." />
+            <property name="field3" type="String" label="Field 3 Header" description="Text body relating to field 3"/>
+            <property name="fieldApiName3" type="String" label="Field 3 API Name" description="API name of the third field to display" />
+            <property name="field4" type="String" label="Field 4 Header" description="Text body relating to field 4"/>
+            <property name="fieldApiName4" type="String" label="Field 4 API Name" description="API name of the fourth field to display" />
+            <property name="field5" type="String" label="Field 5 Header" description="Text body relating to field 5"/>
+            <property name="fieldApiName5" type="String" label="Field 5 API Name" description="API name of the fifth field to display" />
+            <property name="toastpass" type="String" label="Toast Success Message" default="Record has been updated successfully." description="Toast message when records is saved successfully." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

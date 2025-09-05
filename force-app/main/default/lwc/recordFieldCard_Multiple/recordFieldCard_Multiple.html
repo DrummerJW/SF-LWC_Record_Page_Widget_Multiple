@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title={cardTitle} icon-name={icon}>
+        <!-- Main Content -->
+        <div class="slds-m-around_medium height">
+        <!-- Main Body -->
+            <div class="main" lwc:if={summary}> {summary}</div>
+            <br>
+            <!-- Record Edit Form -->
+            <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsuccess={handleSuccess} onerror={handleError}>
+                <div class="body">
+                    <!-- Section 1 -->
+                    <div lwc:if={field1}>{field1}</div>
+                    <lightning-input-field lwc:if={fieldApiName1} field-name={fieldApiName1}></lightning-input-field>
+
+                    <!-- Section 2 -->
+                    <div lwc:if={field2}>{field2}</div>
+                    <lightning-input-field lwc:if={fieldApiName2} field-name={fieldApiName2}></lightning-input-field>
+
+                    <!-- Section 3 -->
+                    <div lwc:if={field3}>{field3}</div>
+                    <lightning-input-field lwc:if={fieldApiName3} field-name={fieldApiName3}></lightning-input-field>
+
+                    <!-- Section 4 -->
+                    <div lwc:if={field4}>{field4}</div>
+                    <lightning-input-field lwc:if={fieldApiName4} field-name={fieldApiName4}></lightning-input-field>
+                    <!-- Section 5 -->
+                    <div lwc:if={field5}>{field5}</div>
+                    <lightning-input-field lwc:if={fieldApiName5} field-name={fieldApiName5}></lightning-input-field>
+                </div>
+            <!-- Spinner -->
+                <div lwc:if={isSaving} class="spinner-container">
+                    <lightning-spinner type="large" alternative-text="Updating Record..."></lightning-spinner>
+                </div>
+            <!-- Save Button -->
+                <lightning-button label="Save" onclick={handleSave} loading={isSaving}>
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
